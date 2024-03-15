@@ -1,10 +1,10 @@
 import React from 'react'
-import { useGetPostsQuery, useGetCommentsQuery } from './features/weather'
+import {useGetWeatherQuery,  useGetCityQuery } from './features/weather'
 
 const App = () => {
 
-  const {data : posts} = useGetPostsQuery({});
-  const {data : comments} = useGetCommentsQuery({});
+  const {data : posts} = useGetWeatherQuery({});
+  const {data : comments} = useGetCityQuery({});
 
   console.log(posts);
   console.log(comments);
