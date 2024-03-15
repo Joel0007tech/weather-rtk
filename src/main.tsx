@@ -1,7 +1,10 @@
 import React from "react"
 import { createRoot } from "react-dom/client"
+import { Provider } from "react-redux"
+import { ApiProvider } from "@reduxjs/toolkit/query/react"
+import weatherApi from "./features/weather"
 import App from "./App"
-
+import store from "./store"
 import "./index.css"
 
 const container = document.getElementById("root")
@@ -11,8 +14,12 @@ if (container) {
 
   root.render(
     <React.StrictMode>
+      <Provider store={store}>
+      <ApiProvider api={weatherApi}>
+      <App />
+      </ApiProvider>
       
-        <App />
+      </Provider>
   
     </React.StrictMode>,
   )
