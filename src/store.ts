@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query";
-import { weatherApi} from "./features/weather"
+import {weatherApi} from "./features/weather";
 
 const store = configureStore({
     reducer: {
