@@ -1,5 +1,7 @@
 import React from 'react'
-import {useGetWeatherQuery,  useGetCityQuery } from './features/weather'
+import {useGetWeatherQuery,  useGetCityQuery } from './features/weather';
+;
+import Head from './container/Display';
 
 const App = () => {
 
@@ -10,7 +12,9 @@ const App = () => {
   console.log(comments);
   
   return (
-    <div>HI</div>
+    <div>
+      <Head />
+    </div>
   )
 }
 
