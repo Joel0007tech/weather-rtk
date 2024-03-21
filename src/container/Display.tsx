@@ -1,16 +1,26 @@
+
 import React from 'react'
 import { CiSearch } from "react-icons/ci";
 
   
 const Head = () => {
+  const myStyle = {
+    backgroundImage:
+        "url('https://images.pexels.com/photos/53594/blue-clouds-day-fluffy-53594.jpeg')",
+    height: "50vh",
+    marginTop: "-70px",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    opacity:"0.7"
+};
   return (
-    <div className='bg-gray-200 p-5'>
+    <div className='p-32 bg-black' style={myStyle}>
       <header>
       <div>
-      <h1 className="text-blue-700 text-4xl text-center"> <span className='text-black'>A </span>
-      weather <span className='text-black'>
+      <h1 className="text-blue-700 text-4xl text-center"> <span className='text-white'>A </span>
+      weather <span className='text-white'>
         A</span>pp</h1>
-        <p className='text-center text-md pt-5'>Your friendly weather forecast finder</p>
+        <p className='text-center text-md pt-5 text-black'>Your friendly weather forecast finder</p>
         </div>
       </header>
      
