@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { CiSearch } from "react-icons/ci";
 
   
 const Head = () => {
@@ -14,7 +14,7 @@ const Head = () => {
         </div>
       </header>
      
-        <section className='flex justify-center pt-4'>
+        <section className='flex justify-center pt-5'>
           {/* <div className=' flex justify-center row gap-5'>
           <div className='flex flex-col p-4 bg-blue-700'>
            <h3>Hello</h3>
@@ -33,7 +33,9 @@ const Head = () => {
           </div>
           </div> */}
 
-          <input type="text" name="" id="" className='bg-blue-500 w-4/12 h-14 p-3'/>
+          <input type="text" name="" id="" className='bg-blue-600 w-4/12 h-14 p-3 border rounded-md'/>
+          <CiSearch className=' relative right-11 top-4 size-6 text-white'/>
+          <input type="submit" value="Search" className=' cursor-pointer bg-blue-600 p-2 pr-10 pl-10 border rounded text-md text-white'/>
         </section>
     
     </div>
