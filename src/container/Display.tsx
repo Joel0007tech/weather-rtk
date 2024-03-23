@@ -13,7 +13,7 @@ const Head = () => {
     backgroundRepeat: "no-repeat"
 };
 const myFont ={
-  fontFamily:"cursive"
+  fontFamily:"Montserrat Alternates, sans-serif"
 }
   return (
     <div className='p-32 pt-80' style={myStyle}>
