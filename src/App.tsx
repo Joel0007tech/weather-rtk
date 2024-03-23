@@ -12,11 +12,7 @@ const App = () => {
   console.log(comments);
   
   return (
-    <div style={{
-      fontFamily: "Radio Canada",
-      fontWeight: 700,
-      fontStyle: "normal"
-    }}>
+    <div>
       <Head />
     </div>
   )
