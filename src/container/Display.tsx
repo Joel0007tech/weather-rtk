@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { CiSearch } from "react-icons/ci";
-import {weatherApi} from '../features/weather';
+import {useGetWeatherQuery, weatherApi} from '../features/weather';
 
   
 const Head = () => {
@@ -16,6 +16,8 @@ const Head = () => {
 const myFont ={
   fontFamily:"Montserrat Alternates, sans-serif"
 }
+
+const {data, error, isLoading } = useGetWeatherQuery('clouds')
   return (
     <div className='p-32 pt-80' style={myStyle}>
       <header>
@@ -47,12 +49,19 @@ const myFont ={
           </div>
           </div> */}
 
-          <input type="text" name="" id="" className='bg-blue-600 w-4/12 h-14 p-3 border rounded-md text-white' style={myFont} onClick={weatherApi}/>
+          <input type="text" name="" id="" className='bg-blue-600 w-4/12 h-14 p-3 border rounded-md text-white' style={myFont} onClick={() => {weatherApi}}/>
           <CiSearch className=' relative right-11 top-4 size-6 text-white'/>
           <input type="submit" value=" Search " className=' cursor-pointer bg-blue-600 p-2 pr-8 
           pl-8 border rounded text-md text-white hover:bg-black text-white;' style={myFont}/>
         </section>
-    
+    {error? (
+      <>oh, bla bla</>
+    ): isLoading ? (
+      <>....loading</>
+    ): data ?(
+      <>
+      <h3 className='text-white'>{data.ciouds}</h3></>
+    ):null}
     </div>
   )
 }
