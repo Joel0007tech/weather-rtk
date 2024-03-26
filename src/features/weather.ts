@@ -6,8 +6,8 @@ export const weatherApi = createApi({
     baseQuery: fetchBaseQuery({baseUrl: 'https://api.openweathermap.org/data/2.5/'}),
     endpoints: (builder) => ({
         getWeather: builder.query({
-        query: (lon) => ({
-            url: `weatherApi/${lon}`,
+        query: (main) => ({
+            url: `weather/${main}`,
             method: 'GET'
         }),
         
