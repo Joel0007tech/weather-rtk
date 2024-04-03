@@ -13,11 +13,14 @@ const Head = () => {
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat"
 };
+const change ={
+backgroundColor:"red"
+};
 const myFont ={
   fontFamily:"Montserrat Alternates, sans-serif"
 }
 
-const {data, error, isLoading } = useGetWeatherQuery('clouds')
+const {data, error, isLoading } = useGetWeatherQuery('Miami')
   return (
     <div className='p-32 pt-80' style={myStyle}>
       <header>
@@ -30,7 +33,7 @@ const {data, error, isLoading } = useGetWeatherQuery('clouds')
         </div>
       </header>
      
-        <section className='flex justify-center pt-5'>
+        <section className='flex justify-center pt-5 gap-3'>
           {/* <div className=' flex justify-center row gap-5'>
           <div className='flex flex-col p-4 bg-blue-700'>
            <h3>Hello</h3>
@@ -49,10 +52,12 @@ const {data, error, isLoading } = useGetWeatherQuery('clouds')
           </div>
           </div> */}
 
-          <input type="text" name="" id="" className='bg-blue-600 w-4/12 h-14 p-3 border rounded-md text-white' style={myFont} onClick={() => {weatherApi}}/>
-          <CiSearch className=' relative right-11 top-4 size-6 text-white'/>
+          <select className='bg-blue-600 w-4/12 h-14 p-3 border rounded-md text-white' style={myFont}>
+          <option value=""></option>
+          </select>
           <input type="submit" value=" Search " className=' cursor-pointer bg-blue-600 p-2 pr-8 
           pl-8 border rounded text-md text-white hover:bg-black text-white;' style={myFont}/>
+            <CiSearch className=' relative right-7 top-4 size-6 text-white'/>
         </section>
     {error? (
       <>oh, bla bla</>
@@ -60,7 +65,7 @@ const {data, error, isLoading } = useGetWeatherQuery('clouds')
       <>....loading</>
     ): data ?(
       <>
-      <h3 className='text-white'>{data.ciouds}</h3></>
+      <h3 className='text-white'>{data.Miami}</h3></>
     ):null}
     </div>
   )

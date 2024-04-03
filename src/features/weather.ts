@@ -6,22 +6,17 @@ export const weatherApi = createApi({
     baseQuery: fetchBaseQuery({baseUrl: 'https://api.openweathermap.org/data/2.5/'}),
     endpoints: (builder) => ({
         getWeather: builder.query({
-        query: (main) => ({
-            url: `weather/${main}`,
+        query: (name) => ({
+            url: `weather/${name}`,
             method: 'GET'
         }),
         
         }),
 
-        getCity:builder.query({
-        query:() => ({
-            url: 'weather?q=Miami&appid=66c84b0c01e16f85950117f98b90839a',
-            method :'GET'
-        })
-        }),
+       
     })
 })
 
-export const {useGetWeatherQuery, useGetCityQuery} = weatherApi
+export const {useGetWeatherQuery} = weatherApi
 
 export default weatherApi
