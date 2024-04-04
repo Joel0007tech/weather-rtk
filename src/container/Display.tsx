@@ -23,7 +23,7 @@ const myFont ={
 
 const {data, error, isLoading } = useGetWeatherQuery('Miami')
   return (
-    <div className='p-32 pt-80' style={myStyle}>
+    <div className='p-32 pt-96' style={myStyle}>
       {<header>
       <div>
       <h1 className="text-black text-4xl text-center font-bold"> A
