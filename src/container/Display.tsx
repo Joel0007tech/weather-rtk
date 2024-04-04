@@ -2,6 +2,7 @@
 import React from 'react'
 import { CiSearch } from "react-icons/ci";
 import {useGetWeatherQuery, weatherApi} from '../features/weather';
+import Selector from './Selector';
 
   
 const Head = () => {
@@ -23,7 +24,7 @@ const myFont ={
 const {data, error, isLoading } = useGetWeatherQuery('Miami')
   return (
     <div className='p-32 pt-80' style={myStyle}>
-      <header>
+      {/* <header>
       <div>
       <h1 className="text-black text-4xl text-center font-bold"> A
       <span className='text-blue-700'> weather 🌐 </span>
@@ -31,9 +32,12 @@ const {data, error, isLoading } = useGetWeatherQuery('Miami')
         <p className='text-center text-md pt-5 tracking-widest font-semibold ' style={myFont}>Your friendly 
         <span className='text-black font-extrabold'> weather</span> forecast finder</p>
         </div>
-      </header>
-     
-        <section className='flex justify-center pt-5 gap-3'>
+      </header> */}
+      <div className=' relative top-16'>
+      <Selector/>
+        </div>
+
+        {/* <section className='flex justify-center pt-5 gap-3'> */}
           {/* <div className=' flex justify-center row gap-5'>
           <div className='flex flex-col p-4 bg-blue-700'>
            <h3>Hello</h3>
@@ -51,7 +55,7 @@ const {data, error, isLoading } = useGetWeatherQuery('Miami')
            <a href="http://">Link here</a>
           </div>
           </div> */}
-
+{/* 
           <select className='bg-blue-600 w-4/12 h-14 p-3 border rounded-md text-white' style={myFont}>
           <option value=""></option>
           </select>
@@ -67,6 +71,7 @@ const {data, error, isLoading } = useGetWeatherQuery('Miami')
       <>
       <h3 className='text-white'>{data.Miami}</h3></>
     ):null}
+    */}
     </div>
   )
 }
