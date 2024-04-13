@@ -1,9 +1,8 @@
 
 import React, { useState } from 'react'
 import { Country } from 'country-state-city';
-
-
 import Selector from './Selector';
+import { useGetWeatherQuery } from '../features/weather';
 
   
 const Head = () => {
@@ -25,8 +24,22 @@ const myFont ={
 
 const [country, setcountry] = useState(countryData[0])
 
+const {data, error, isLoading} = useGetWeatherQuery('bulbasaur')
+
   return (
     <div className='p-32 pt-96' style={myStyle}>
+      {
+        error?(
+          <>there, was an error</>
+        ) : isLoading?(
+          <>loading....</>
+        ) : data?(
+          <>
+           <h3 className='text-white'>{data.species.name}</h3>
+          <img src={data.sprites.front_shiny} alt={data.species.name} /></>
+        ) : null
+      }
+
       {<header>
       <div>
       <h1 className="text-black text-4xl text-center font-bold"> A

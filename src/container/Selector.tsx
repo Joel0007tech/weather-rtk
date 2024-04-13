@@ -9,8 +9,8 @@ export default function Selector({data,selected,setSelected}) {
 
   const filteredPeople =
     query === ''
-      ? people
-      : people.filter((person) =>
+      ? data
+      : data.filter((person) =>
           person.name
             .toLowerCase()
             .replace(/\s+/g, '')
