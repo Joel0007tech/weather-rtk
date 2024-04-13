@@ -24,7 +24,7 @@ const myFont ={
 
 const [country, setcountry] = useState(countryData[0])
 
-const {data, error, isLoading} = useGetWeatherQuery('bulbasaur')
+const {data, error, isLoading} = useGetWeatherQuery('name[0]')
 
   return (
     <div className='p-32 pt-96' style={myStyle}>
