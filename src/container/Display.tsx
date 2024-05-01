@@ -50,7 +50,7 @@ const {data, error, isLoading} = useGetWeatherQuery('name[0]')
         </div>
       </header>}
 
-      <section className='flex flex-row gap-4 justify-center relative top-3 md:flex-col'>
+      <section className='flex flex-row gap-4 justify-center relative top-3 md:flex-col md:relative md:right-10'>
       <Selector 
       data={countryData} 
       selected={country} 
