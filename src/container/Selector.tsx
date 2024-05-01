@@ -20,7 +20,7 @@ export default function Selector({data,selected,setSelected}) {
   return (
     <div>
       <Combobox value={selected} onChange={setSelected}>
-        <div className="relative mt-1 w-96 m-auto md:w-72 relative right-5">
+        <div className="mt-1 w-96 m-auto md:w-72 relative right-5">
           <div className="relative w-full cursor-default overflow-hidden rounded-lg bg-white p-1
           text-left shadow-md focus:outline-none focus-visible:ring-2
            focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:to-blue-500 sm:text-sm">

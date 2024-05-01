@@ -42,7 +42,7 @@ const {data, error, isLoading} = useGetWeatherQuery('name[0]')
 
       {<header>
       <div>
-      <h1 className="text-black text-4xl text-center font-bold md:flex flex-row"> A
+      <h1 className="text-black text-4xl text-center font-bold md:flex flex-row relative right-9 text-md"> A
       <span className='text-blue-700'> weather 🌐 </span>
         App</h1>
         <p className='text-center text-md pt-5 tracking-widest font-semibold md:hidden' style={myFont}>Your friendly 
