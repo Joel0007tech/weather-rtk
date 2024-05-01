@@ -41,7 +41,7 @@ const {data, error, isLoading} = useGetWeatherQuery('name[0]')
       }
 
       {<header>
-      <div>
+      <div className='md:flex flex-col'>
       <h1 className="text-black text-4xl text-center font-bold"> A
       <span className='text-blue-700'> weather 🌐 </span>
         App</h1>
@@ -50,13 +50,13 @@ const {data, error, isLoading} = useGetWeatherQuery('name[0]')
         </div>
       </header>}
 
-      <section className='flex flex-row gap-4 justify-center relative top-3'>
+      <section className='flex flex-row gap-4 justify-center relative top-3 md:flex-col'>
       <Selector 
       data={countryData} 
       selected={country} 
       setSelected={setcountry}
       />
-      <input type="submit" value=" Search " className=' cursor-pointer bg-blue-600 relative pr-8 pl-8 h-11 top-1
+      <input type="submit" value=" Search " className='cursor-pointer bg-blue-600 relative pr-8 pl-8 h-11 top-1
       border rounded text-md text-white hover:bg-black text-white;' style={myFont}/>
         </section>
     </div>
